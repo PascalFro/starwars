@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ personnage.name}}
+{% endblock %}
+{% block body %}
+	<h2>{{ personnage.name}}</h2>
+	<ul>
+		<li>Année de naissance :
+			{{ personnage.birth_year }}</li>
+		<li>Taile :
+			{{ personnage.height }}</li>
+		<li>Poids :
+			{{ personnage.mass }}</li>
+		<li>Couleur des cheveux :
+			{{ personnage.hair_color }}</li>
+		<li>Couleur des yeux :
+			{{ personnage.eye_color }}</li>
+		<li>Couleur de peau :
+			{{ personnage.skin_color }}</li>
+	</ul>
+
+{% endblock %}

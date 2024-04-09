@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index des personnages
+{% endblock %}
+
+{% block body %}
+	{% for personnage in personnages %}
+		<article>
+			<a href="{{ path( 'app_personnage', { 'id' : personnage.url|replace({ 'https://swapi.py4e.com/api/people/':'', '/':'' }) } ) }}">
+				{{ personnage.name}}
+			</a>
+		</article>
+	{% endfor %}
+{% endblock %}
